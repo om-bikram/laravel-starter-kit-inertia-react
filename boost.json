@@ -1,13 +1,12 @@
 {
     "agents": [
-        "claude_code",
-        "cursor",
-        "phpstorm"
+        "copilot",
+        "opencode"
     ],
     "editors": [
-        "claude_code",
-        "cursor",
-        "phpstorm"
+        "opencode",
+        "vscode"
     ],
-    "guidelines": []
+    "guidelines": [],
+    "sail": true
 }

@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', fn () => Inertia::render('welcome'))->name('home');
+Route::get('/regions/bagmati', fn () => Inertia::render('region/show'))->name('regions.show');
+Route::get('/products/pashmina', fn () => Inertia::render('product/show'))->name('products.show');
+Route::get('/artisans/ram', fn () => Inertia::render('artisan/show'))->name('artisans.show');
+Route::get('/artisans', fn () => Inertia::render('artisan/index'))->name('artisans.index');
+Route::get('/cart', fn () => Inertia::render('cart/index'))->name('cart.index');
 
 Route::middleware(['auth', 'verified'])->group(function (): void {
     Route::get('dashboard', fn () => Inertia::render('dashboard'))->name('dashboard');
